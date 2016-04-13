@@ -1,0 +1,19 @@
+<div class="jumbotron">
+	<h2>People's List</h2>
+	<p>Click on the button to list</p>
+	<button class="btn" ng-click="findAll()">Click Here</button>
+
+	<section>
+		<br>
+		<div class="rTable" ng-if="peoples">		
+			<div ng-repeat="p in peoples track by p.id">
+				<div class="rTableRow">
+					<div class="rTableCell">{{p.id}}</div>
+					<div class="rTableCell">{{p.name}}</div>
+					<div class="rTableCell">{{p.disclosableInfo}}</div>				
+				</div>
+			</div>						
+		</div>
+	</section>
+</div>
+
