@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 angular
   .module('frontendApp', [
     'ngAnimate',
@@ -29,7 +30,12 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/people', {
+        templateUrl: 'views/people.html',
+        controller: 'PeoplecontrolerCtrl',
+        controllerAs: 'PeoplecontrolerCtrl'
+      })
       .otherwise({
         redirectTo: '/'
-      });
+      });      
   });
